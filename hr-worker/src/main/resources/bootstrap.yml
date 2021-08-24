@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: hr-worker
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /workers/actuator
