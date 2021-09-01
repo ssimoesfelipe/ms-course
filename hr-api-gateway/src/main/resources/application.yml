@@ -19,6 +19,10 @@ spring:
           uri: lb://hr-user
           predicates:
             - Path=/users/**
+        - id: hr-oauth
+          uri: lb://hr-oauth
+          predicates:
+            - Path=/oauth/users/**
 eureka:
   client:
     service-url:
